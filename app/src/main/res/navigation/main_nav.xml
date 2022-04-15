@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        tools:layout="@layout/fragment_splash"
+        android:name="adams.sheek.montazeranapp.ui.splash.SplashFragment"
+        android:label="SplashFragment" >
+        <action
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/main_nav"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_splashFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/main_nav"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_splashFragment_to_listTopicFragment"
+            app:destination="@id/listTopicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="adams.sheek.montazeranapp.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login"
+        android:label="LoginFragment" >
+        <action
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/main_nav"
+            app:popUpToInclusive="true"
+            android:id="@+id/action_loginFragment_to_listTopicFragment"
+            app:destination="@id/listTopicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listTopicFragment"
+        android:name="adams.sheek.montazeranapp.ui.listTopic.ListTopicFragment"
+        android:label="ListTopicFragment" >
+        <action
+            android:id="@+id/action_listTopicFragment_to_listClassesFragment"
+            app:destination="@id/listClassesFragment" />
+        <action
+            android:id="@+id/action_listTopicFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listClassesFragment"
+        android:name="adams.sheek.montazeranapp.ui.listClasses.ListClassesFragment"
+        android:label="ListClassesFragment" >
+        <action
+            android:id="@+id/action_listClassesFragment_to_classDetailFragment"
+            app:destination="@id/classDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/classDetailFragment"
+        android:name="adams.sheek.montazeranapp.ui.classDetail.ClassDetailFragment"
+        android:label="ClassDetailFragment" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="adams.sheek.montazeranapp.ui.about.AboutFragment"
+        android:label="AboutFragment" />
+</navigation>

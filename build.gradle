@@ -1,0 +1,34 @@
+apply from: "$rootDir/versionsPlugin.gradle"
+
+buildscript {
+    apply from: "$rootDir/dependencies.gradle"
+    repositories {
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$versions.gradleBuildTool"
+//        classpath "com.google.gms:google-services:$versions.google_services"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$versions.hiltCoreVersion"
+        classpath "com.diffplug.spotless:spotless-plugin-gradle:$versions.spotlessGradle"
+        classpath "com.github.ben-manes:gradle-versions-plugin:$versions.versionPlugin"
+        classpath "org.jetbrains.kotlin:kotlin-serialization:$versions.KotlinSerialization"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.nav_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        gradlePluginPortal()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">حال خوب</string>
+    <string name="please_wait">کمی صبر کنید</string>
+    <string name="downloading">"در حال دانلود"</string>
+    <string name="about">
+        رسالت تمام انبیاء و رسولان الهی تزکیه و تعلیم مردم است و وظیفه مردم اطاعت از انبیاء و اولیاء خدا و عمل به دستورات و قوانین الهی است. از آنجا که مردم در انجام وظیفه خود کوتاهی نموده و آماده درک محضر حجت خداوند نیستند و غیبت آخرین ذخیره الهی طولانی گشته، بر علماء و و بزرگان دین واجب است تا برای ظهور منجی عالم بشریت زمینه سازی نمایند. استاد محمد شجاعی استاد حوزه و دانشگاه پس از سالها مجاهدت در راه خداوند از سال 1368 با درک این وظیفه خطیر الهی، تمام همت خویش را معطوف به این روایت از رسول ا... (ص) نمودند که "افضل اعمال امتی انتظار الفرج ′
+در همین راستا،کانون فرهنگی تبلیغی منتظران منجی علیه السلام به نمایندگی از موسسه منتظران  منجی علیه السلام سعی در اجماع و تألیف قلوب مؤمنین و یادآوری عهد با امام دوازدهمشان نمودند تا به یاری خداوند و استعانت از خود حضرت و حضور ارزشمند ماهیانه استاد شجاعی در مشهد وسایر اساتید همچون استاد عظیمی ،استاد امینی خواه،استاد سوری و...در زمینه خودسازی و زمینه سازی ظهور مبارک مولای غریبمان گام های موثری رابردارد.
+    </string>
+
+
+
+
+
+    <string name="error_cleartext_not_permitted">Cleartext HTTP traffic not permitted. See https://exoplayer.dev/issues/cleartext-not-permitted</string>
+
+    <string name="error_generic">Playback failed</string>
+
+    <string name="error_drm_unsupported_before_api_18">DRM content not supported on API levels below 18</string>
+
+    <string name="error_drm_unsupported_scheme">This device does not support the required DRM scheme</string>
+
+    <string name="error_querying_decoders">Unable to query device decoders</string>
+
+    <string name="error_unsupported_video">Media includes video tracks, but none are playable by this device</string>
+
+    <string name="error_unsupported_audio">Media includes audio tracks, but none are playable by this device</string>
+
+    <string name="storage_permission_denied">Permission to access storage was denied</string>
+
+    <string name="sample_list_load_error">One or more sample lists failed to load</string>
+
+    <string name="download_start_error">Failed to start download</string>
+
+    <string name="download_start_error_offline_license">Failed to obtain offline license</string>
+
+    <string name="download_playlist_unsupported">This demo app does not support downloading playlists</string>
+
+    <string name="download_scheme_unsupported">This demo app only supports downloading http streams</string>
+
+    <string name="download_live_unsupported">This demo app does not support downloading live content</string>
+
+    <string name="download_ads_unsupported">IMA does not support offline ads</string>
+
+    <string name="prefer_extension_decoders">Prefer extension decoders</string>
+
+</resources>
