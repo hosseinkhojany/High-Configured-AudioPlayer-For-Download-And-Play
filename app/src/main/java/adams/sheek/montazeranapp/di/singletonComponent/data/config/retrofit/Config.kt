@@ -2,6 +2,7 @@ package adams.sheek.montazeranapp.di.singletonComponent.data.config.retrofit
 
 import adams.sheek.montazeranapp.data.config.retrofit.EndPoints
 import adams.sheek.montazeranapp.data.config.retrofit.HttpRequestInterceptor
+import adams.sheek.montazeranapp.data.config.retrofit.RestAdapter
 import android.util.Log
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.skydoves.sandwich.coroutines.CoroutinesResponseCallAdapterFactory
@@ -22,26 +23,13 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object Config {
 
-    @Provides
-    @Singleton
-    fun provideOkHttpClient(): OkHttpClient {
-        val httpLoggingInterceptor = HttpLoggingInterceptor { log ->
-            Log.d("NETWORK_RESPONSE", log)
-        }
-        httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY)
-        return OkHttpClient.Builder()
-            .addInterceptor(httpLoggingInterceptor)
-            .addInterceptor(HttpRequestInterceptor())
-            .retryOnConnectionFailure(true)
-            .build()
-    }
 
     @ExperimentalSerializationApi
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
+    fun provideRetrofit(): Retrofit {
         return Retrofit.Builder()
-            .client(okHttpClient)
+            .client(RestAdapter.getUnsafeOkHttpClient().build())
             .baseUrl("https://www.montazeran-monji.ir/app/api/v1/")
             .addConverterFactory(Json{
                 ignoreUnknownKeys = true

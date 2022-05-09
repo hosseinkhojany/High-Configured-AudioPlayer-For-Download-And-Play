@@ -3,14 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-mdpi/rounded_border.xml" value="0.173" />
         <entry key="app/src/main/res/drawable/fab_label_background.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/outline_sync_24.xml" value="0.15648148148148147" />
         <entry key="app/src/main/res/drawable/round_close_20.xml" value="0.16018518518518518" />
         <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.16018518518518518" />
+        <entry key="app/src/main/res/drawable/scale_up.xml" value="0.173" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="app/src/main/res/layout/back_logo.xml" value="0.1814814814814815" />
         <entry key="app/src/main/res/layout/class_item.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/drawer_menu.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/drawer_menu.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_about.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_class_detail.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_classes_fragment.xml" value="0.1" />
@@ -18,6 +20,7 @@
         <entry key="app/src/main/res/layout/fragment_list_sessions.xml" value="0.1953125" />
         <entry key="app/src/main/res/layout/fragment_list_topics.xml" value="0.2" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_send_message.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_splash.xml" value="0.18" />
         <entry key="app/src/main/res/layout/recycler_view_header.xml" value="0.2" />
         <entry key="app/src/main/res/layout/topic_item.xml" value="0.18" />

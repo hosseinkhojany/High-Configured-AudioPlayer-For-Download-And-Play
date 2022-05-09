@@ -1,10 +1,7 @@
 package adams.sheek.montazeranapp.data.config.retrofit
 
 import adams.sheek.montazeranapp.BuildConfig
-import adams.sheek.montazeranapp.data.model.response.CheckUpdateResponse
-import adams.sheek.montazeranapp.data.model.response.DownloadFileResponse
-import adams.sheek.montazeranapp.data.model.response.LoginResponse
-import adams.sheek.montazeranapp.data.model.response.UserSubjectsResponse
+import adams.sheek.montazeranapp.data.model.response.*
 import adams.sheek.montazeranapp.utils.Helper
 import adams.sheek.montazeranapp.utils.SharedConfig
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
@@ -43,6 +40,12 @@ interface EndPoints {
         @Part("file") file: RequestBody,
         @Part("id") id: Int,
     ): Response<DownloadFileResponse>
+
+    @Multipart
+    @POST("support/store")
+    suspend fun sendMessage(
+        @Part("message") message: RequestBody,
+    ): Response<SendMessageResponse>
 
 
 }

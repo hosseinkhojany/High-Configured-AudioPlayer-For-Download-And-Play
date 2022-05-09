@@ -28,7 +28,7 @@ class LoginRepository (private val service: LoginService,
                 emit(it.success)
             }
         }catch (e: Exception){
-            Toaster.show("خطا در اتصال به سرور")
+            e.message?.let { Toaster.show(it) }
         }
     }.onStart { onStart() }.onCompletion { onComplete() }.flowOn(coroutineDispatcher)
 

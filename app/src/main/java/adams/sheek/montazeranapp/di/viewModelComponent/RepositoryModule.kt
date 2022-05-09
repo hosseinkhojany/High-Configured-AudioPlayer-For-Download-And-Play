@@ -2,8 +2,10 @@ package adams.sheek.montazeranapp.di.viewModelComponent
 
 import adams.sheek.montazeranapp.data.datasource.local.TopicDao
 import adams.sheek.montazeranapp.data.datasource.remote.LoginService
+import adams.sheek.montazeranapp.data.datasource.remote.SupportService
 import adams.sheek.montazeranapp.data.datasource.remote.TopicService
 import adams.sheek.montazeranapp.data.repositories.LoginRepository
+import adams.sheek.montazeranapp.data.repositories.SupportRepository
 import adams.sheek.montazeranapp.data.repositories.TopicRepository
 import dagger.Module
 import dagger.Provides
@@ -33,6 +35,15 @@ object RepositoryModule {
         coroutineDispatcher: CoroutineDispatcher
     ): TopicRepository {
         return TopicRepository(service, dao, coroutineDispatcher)
+    }
+
+    @Provides
+    @ViewModelScoped
+    fun provideSupport(
+        service: SupportService,
+        coroutineDispatcher: CoroutineDispatcher
+    ): SupportRepository {
+        return SupportRepository(service, coroutineDispatcher)
     }
 
 }

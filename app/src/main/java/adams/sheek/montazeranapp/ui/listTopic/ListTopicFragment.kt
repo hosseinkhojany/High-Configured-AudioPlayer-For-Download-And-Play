@@ -27,6 +27,7 @@ import adams.sheek.montazeranapp.utils.animatedThemeManager.themes.MyAppTheme
 import adams.sheek.montazeranapp.utils.animatedThemeManager.themes.NightTheme
 import android.content.Intent
 import android.net.Uri
+import android.widget.Toast
 import com.google.android.exoplayer2.ui.PlayerNotificationManager
 import com.google.android.material.switchmaterial.SwitchMaterial
 import dagger.hilt.android.AndroidEntryPoint
@@ -69,6 +70,7 @@ class ListTopicFragment : Fragment(), View.OnClickListener{
         binding.naviView.findViewById<TextView>(R.id.logout).setOnClickListener(this)
         binding.naviView.findViewById<TextView>(R.id.support).setOnClickListener(this)
         binding.naviView.findViewById<TextView>(R.id.about).setOnClickListener(this)
+        binding.naviView.findViewById<TextView>(R.id.report).setOnClickListener(this)
     }
 
     private fun syncData(forceUpdate: Boolean = false){
@@ -118,6 +120,9 @@ class ListTopicFragment : Fragment(), View.OnClickListener{
                         }
                     }
                 }
+            }
+            binding.naviView.findViewById<TextView>(R.id.report) -> {
+                findNavController().navigate(ListTopicFragmentDirections.actionListTopicFragmentToSendMessageFragment())
             }
             binding.naviView.findViewById<TextView>(R.id.support) -> { makeCall() }
             binding.call ->                                          { makeCall() }
