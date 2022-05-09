@@ -15,5 +15,6 @@ Database: Jetpack Room<br/>
 Dependency Injection: Dagger Hilt<br/>
 Notification Player: Built in exoplayer notification<br/>
 ## Main Feature: Download and play at the same time 
+https://github.com/hosseinkhojany/High-Configured-AudioPlayer-For-Download-And-Play/blob/master/ARTS/demo.mp4
 
 
